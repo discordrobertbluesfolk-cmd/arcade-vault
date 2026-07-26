@@ -12,14 +12,9 @@ The project follows **Spec Driven Design** using `/spec` and `/spec-impl` comman
 
 The codebase is currently the unmodified `create-next-app` scaffold — no game logic, routes, or data layer exist yet.
 
-## Commands
+## Skills
+Usa siempre el Front-End Design Skill cuando quieras hacer diseños HTML. 
 
-- `npm run dev` — start dev server (Turbopack, stable by default in Next 16)
-- `npm run build` — production build (Turbopack by default; fails if a webpack config is detected — see the Next 16 upgrade doc for options)
-- `npm run start` — run the production build
-- `npm run lint` — ESLint (flat config in `eslint.config.mjs`). Note: `next lint` was removed in Next 16; this project already invokes the ESLint CLI directly.
-
-No test framework is configured yet.
 
 ## Architecture notes
 
