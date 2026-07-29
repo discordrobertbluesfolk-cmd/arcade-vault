@@ -43,7 +43,7 @@ export function GameDetailView({ game, scores }: { game: Game; scores: ScoreRow[
             <button className="btn xl pulse" onClick={() => router.push(`/jugar/${game.id}`)}>
               ▶ JUGAR AHORA
             </button>
-            <button className="btn ghost lg" onClick={() => router.push("/")}>
+            <button className="btn ghost lg" onClick={() => router.push("/juegos")}>
               VOLVER AL VAULT
             </button>
           </div>
