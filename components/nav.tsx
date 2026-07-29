@@ -11,8 +11,10 @@ export function Nav() {
   const router = useRouter();
   const { user, signOut } = useUser();
 
-  const isLibraryActive = pathname === "/" || pathname.startsWith("/juego/") || pathname.startsWith("/jugar/");
+  const isHomeActive = pathname === "/";
+  const isLibraryActive = pathname === "/juegos" || pathname.startsWith("/juego/") || pathname.startsWith("/jugar/");
   const isHallActive = pathname === "/salon-de-la-fama";
+  const isAboutActive = pathname === "/acerca-de";
   const isAuthActive = pathname === "/login";
 
   const close = () => setOpen(false);
@@ -31,11 +33,17 @@ export function Nav() {
           </div>
         </div>
         <div className="links">
-          <Link href="/" className={isLibraryActive ? "active" : ""}>
+          <Link href="/" className={isHomeActive ? "active" : ""}>
+            Inicio
+          </Link>
+          <Link href="/juegos" className={isLibraryActive ? "active" : ""}>
             Biblioteca
           </Link>
           <Link href="/salon-de-la-fama" className={isHallActive ? "active" : ""}>
             Salón de la Fama
+          </Link>
+          <Link href="/acerca-de" className={isAboutActive ? "active" : ""}>
+            Acerca de
           </Link>
         </div>
         <div className="spacer"></div>
@@ -62,11 +70,17 @@ export function Nav() {
         <div className="pixel neon-cyan" style={{ fontSize: 11, marginBottom: 16 }}>
           MENÚ
         </div>
-        <Link href="/" className={isLibraryActive ? "active" : ""} onClick={close}>
+        <Link href="/" className={isHomeActive ? "active" : ""} onClick={close}>
+          Inicio
+        </Link>
+        <Link href="/juegos" className={isLibraryActive ? "active" : ""} onClick={close}>
           Biblioteca
         </Link>
         <Link href="/salon-de-la-fama" className={isHallActive ? "active" : ""} onClick={close}>
           Salón de la Fama
+        </Link>
+        <Link href="/acerca-de" className={isAboutActive ? "active" : ""} onClick={close}>
+          Acerca de
         </Link>
         <Link href="/login" className={isAuthActive ? "active" : ""} onClick={close}>
           {user ? "Cuenta" : "Iniciar Sesión"}

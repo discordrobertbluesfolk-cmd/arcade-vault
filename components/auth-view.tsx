@@ -15,12 +15,12 @@ export function AuthView() {
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
     login({ name: (user || "PLAYER1").toUpperCase().slice(0, 10) });
-    router.push("/");
+    router.push("/juegos");
   };
 
   const playAsGuest = () => {
     login({ name: "INVITADO" });
-    router.push("/");
+    router.push("/juegos");
   };
 
   return (

@@ -1,6 +1,6 @@
-import { LibraryView } from "@/components/library-view";
+import { HomeView } from "@/components/home-view";
 import { GAMES } from "@/lib/games";
 
 export default function Home() {
-  return <LibraryView games={GAMES} />;
+  return <HomeView games={GAMES} />;
 }
